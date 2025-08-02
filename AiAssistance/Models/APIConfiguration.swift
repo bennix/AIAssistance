@@ -87,12 +87,3 @@ struct APIConfiguration {
         return key
     }
 }
-
-// MARK: - Default API Key Setup
-extension APIConfiguration {
-    func setupDefaultAPIKey() {
-        // Set the provided API key
-        let defaultKey = "5ad89a67b59f45d2a51c9dca6971ffe4.RlnsgxsvEw0wRhLk"
-        setAPIKey(defaultKey)
-    }
-}

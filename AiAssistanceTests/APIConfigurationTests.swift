@@ -54,13 +54,5 @@ final class APIConfigurationTests: XCTestCase {
         XCTAssertEqual(headers["Accept"], "text/event-stream")
     }
     
-    func testDefaultAPIKeySetup() {
-        let config = APIConfiguration.shared
-        
-        config.setupDefaultAPIKey()
-        
-        XCTAssertTrue(config.hasValidAPIKey())
-        XCTAssertNotNil(config.getAPIKey())
-        XCTAssertTrue(config.getAPIKey()!.contains("."))
-    }
+    
 }

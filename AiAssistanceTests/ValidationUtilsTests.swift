@@ -78,7 +78,7 @@ final class ValidationUtilsTests: XCTestCase {
     }
     
     func testAPIKeyValidation() {
-        XCTAssertTrue(ValidationUtils.isValidAPIKeyFormat("5ad89a67b59f45d2a51c9dca6971ffe4.RlnsgxsvEw0wRhLk"))
+        XCTAssertTrue(ValidationUtils.isValidAPIKeyFormat("valid.api.key.with.dots.and.more"))
         XCTAssertTrue(ValidationUtils.isValidAPIKeyFormat("valid.api.key.with.dots"))
         XCTAssertFalse(ValidationUtils.isValidAPIKeyFormat("short"))
         XCTAssertFalse(ValidationUtils.isValidAPIKeyFormat(""))
