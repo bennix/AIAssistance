@@ -94,18 +94,39 @@ AiAssistance/
 
 ## 配置说明
 
-### API配置
-在 `APIConfiguration.swift` 中配置你的API设置：
+### API Key 配置和申请
 
+#### 如何申请 GLM API Key
+1. 访问智谱AI开放平台：https://open.bigmodel.cn/
+2. 注册或登录账号。
+3. 在控制台中创建应用并生成 API Key。
+4. 注意：API Key 格式通常为类似 `xxxxxxxx.xxxxxxxxxxxx` 的字符串。
+5. 请妥善保管您的 API Key，不要在代码中硬编码或公开分享。
+
+#### 如何添加 API Key
+本应用使用 Keychain 安全存储 API Key。您有两种方式配置：
+
+1. **通过代码设置**（推荐用于开发）：
+   - 打开 `Models/APIConfiguration.swift` 文件。
+   - 在适当位置调用 `APIConfiguration.shared.setAPIKey("your-api-key-here")`。
+   - 注意：不要将实际 Key 提交到 Git 仓库。
+
+2. **运行时配置**（如果应用支持设置界面）：
+   - 运行应用后，在设置界面输入您的 API Key。
+   - 应用会安全存储在 Keychain 中。
+
+示例代码（在应用初始化时设置，如果需要）：
 ```swift
 struct APIConfiguration {
     static let shared = APIConfiguration()
     
-    private let defaultAPIKey = "your-api-key-here"
     private let baseURL = "https://open.bigmodel.cn/api/paas/v4/"
     
     // ... 其他配置
 }
+
+// 在 AiAssistanceApp.swift 或其他初始化处
+APIConfiguration.shared.setAPIKey("your-api-key-here")
 ```
 
 ### 权限配置
