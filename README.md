@@ -1,5 +1,10 @@
 # AI语音助手 (AI Voice Assistant)
 
+> **License / 许可:** Original code authored by bennix: **GPL-3.0-only**.
+> Upstream and third-party material retain their original terms and notices.
+> See [LICENSE](LICENSE) and [LICENSING.md](LICENSING.md) for the current licensing scope.
+
+
 一个基于SwiftUI开发的iOS语音助手应用，支持语音识别和AI对话功能。
 
 ## 功能特性
@@ -185,7 +190,7 @@ APIConfiguration.shared.setAPIKey("your-api-key-here")
 
 ## 许可证
 
-本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+本项目中 bennix 原创代码采用 GPL-3.0-only - 查看 [LICENSE](LICENSE) 文件了解详情。
 
 ## 联系方式
 
